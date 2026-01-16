@@ -7,17 +7,17 @@
 
   <style>
  :root{
- /* Romantic deep red background */
---gold-1:#5b0f14;   /* deep wine red */
---gold-2:#8b1e24;   /* rich romantic red */
+  /* Lime green background */
+  --lime-1:#baff00;   /* bright lime */
+  --lime-2:#9be000;   /* slightly deeper lime */
 
-  /* Deep pitch background (main body) */
-  --dark-bg:#0b1f14;  /* deep forest / pitch green */
+  /* Dark pitch green (text background) */
+  --pitch:#0b1f14;
 
   /* Text colors */
   --cream:#ffffff;
   --cream2: rgba(255,255,255,0.85);
-  --line: rgba(255,255,255,0.15);
+  --line: rgba(255,255,255,0.18);
 }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -27,15 +27,11 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color: var(--cream);
       overflow-x:hidden;
-      background:
-        radial-gradient(1200px 700px at 20% 10%, rgba(255,215,120,0.18), transparent 60%),
-        radial-gradient(900px 600px at 80% 20%, rgba(255,205,90,0.14), transparent 62%),
-        radial-gradient(900px 600px at 50% 90%, rgba(255,220,140,0.10), transparent 65%),
-        linear-gradient(180deg, var(--gold-2), var(--gold-1));
+      background: linear-gradient(180deg, var(--lime-1), var(--lime-2));
       position: relative;
     }
 
-    /* ===== PLENTY romantic bubble flowers (white + red + pink) ===== */
+    /* ===== Romantic flower overlay ===== */
     body::before{
       content:"";
       position: fixed;
@@ -43,21 +39,22 @@
       pointer-events:none;
       z-index: 0;
       background:
-        radial-gradient(circle at 6% 8%,  rgba(255,255,255,0.28) 0 16px, transparent 17px),
-        radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.22) 0 22px, transparent 23px),
-        radial-gradient(circle at 12% 6%,  rgba(255,255,255,0.20) 0 28px, transparent 29px),
-        radial-gradient(circle at 5% 16%,  rgba(255,160,175,0.16) 0 40px, transparent 41px),
-        radial-gradient(circle at 16% 10%, rgba(255,255,255,0.12) 0 48px, transparent 49px);
-      opacity: 0.95;
+        radial-gradient(circle at 6% 8%,  rgba(255,255,255,0.26) 0 16px, transparent 17px),
+        radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.18) 0 22px, transparent 23px),
+        radial-gradient(circle at 94% 8%,  rgba(255,255,255,0.26) 0 16px, transparent 17px),
+        radial-gradient(circle at 90% 12%, rgba(255, 75, 95,0.18) 0 22px, transparent 23px),
+        radial-gradient(circle at 12% 88%, rgba(255,255,255,0.20) 0 40px, transparent 41px),
+        radial-gradient(circle at 88% 86%, rgba(255,170,185,0.14) 0 52px, transparent 53px);
+      opacity: 0.8;
       animation: floaty 10s ease-in-out infinite;
     }
 
     @keyframes floaty{
-      0%,100% { transform: translateY(0px); }
-      50%     { transform: translateY(-10px); }
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
-    .layer { position: relative; z-index: 1; }
+    .layer{ position: relative; z-index:1; }
 
     /* ===== HERO ===== */
     .hero{
@@ -70,24 +67,23 @@
 
     .card{
       width: min(900px, 92vw);
+      background: rgba(11,31,20,0.92);
       border: 1px solid var(--line);
-      background: rgba(10,7,2,0.28);
-      backdrop-filter: blur(10px);
-      border-radius: 24px;
+      border-radius: 28px;
       padding: clamp(24px, 4vw, 48px);
       text-align:center;
-      position: relative;
-      z-index: 1;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
     }
 
     .tag{
       display:inline-flex;
-      gap:10px;
+      gap:8px;
       align-items:center;
       padding: 10px 14px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255,247,230,0.08);
+      background: rgba(255,255,255,0.08);
       color: var(--cream2);
       font-size: 13px;
     }
@@ -97,6 +93,7 @@
       font-size: clamp(40px, 6vw, 70px);
       font-weight: 900;
       color: var(--cream);
+      text-shadow: 0 14px 40px rgba(0,0,0,0.35);
     }
 
     .details{
@@ -116,40 +113,75 @@
 
     .pill{
       border: 1px solid var(--line);
-      background: rgba(255,247,230,0.07);
-      padding: 10px 12px;
+      background: rgba(255,255,255,0.08);
+      padding: 10px 14px;
       border-radius: 999px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
     }
 
     .scrollHint{
-      margin-top: 14px;
-      color: rgba(255,247,230,0.85);
+      margin-top: 16px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
+      color: rgba(255,255,255,0.90);
     }
 
-    /* ===== SECTION ===== */
+    /* ===== SECTION 2 ===== */
     .section{
       padding: 72px 16px 80px;
       text-align:center;
     }
 
+    .wrap{
+      width: min(980px, 94vw);
+      margin: 0 auto;
+    }
+
+    .h2{
+      font-size: clamp(26px, 3.6vw, 36px);
+      color: var(--pitch);
+      margin-bottom: 10px;
+      text-shadow: 0 8px 20px rgba(255,255,255,0.25);
+    }
+
+    .sub{
+      color: rgba(11,31,20,0.9);
+      font-size: 14px;
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+
+    .centerCTA{
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      gap: 14px;
+    }
+
     .btn{
       text-decoration:none;
-      border: 1px solid rgba(255,247,230,0.22);
-      background: rgba(255,247,230,0.92);
-      color: #2b1d05;
-      padding: 14px 22px;
+      background: rgba(11,31,20,0.94);
+      color: var(--cream);
+      padding: 14px 24px;
       border-radius: 20px;
-      display:inline-block;
-      margin-top: 14px;
       font-weight: 800;
+      min-width: min(360px, 92vw);
+      transition: transform .15s ease, box-shadow .2s ease;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
     }
 
     .footer{
       margin-top: 32px;
-      color: rgba(255,247,230,0.65);
+      color: rgba(11,31,20,0.9);
       font-size: 12px;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -157,6 +189,7 @@
 <body>
   <div class="layer">
 
+    <!-- HERO -->
     <section class="hero">
       <div class="card">
         <div class="tag">💍 Wedding Reception</div>
@@ -179,14 +212,39 @@
       </div>
     </section>
 
+    <!-- SECTION 2 -->
     <section class="section">
-      <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank">
-        🌸 Explore Wedding Photos
-      </a>
+      <div class="wrap">
+        <h2 class="h2">Memories</h2>
+        <p class="sub">A romantic space for your special moments.</p>
 
-      <div class="footer">Made with love • AJ & Mariama</div>
+        <div class="centerCTA">
+          <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank" rel="noopener">
+            🌸 Explore Wedding Photos
+          </a>
+
+          <a class="btn" href="#" target="_blank" rel="noopener">
+            📜 View Wedding Agenda
+          </a>
+        </div>
+
+        <div class="footer">Made with love • AJ & Mariama</div>
+      </div>
     </section>
 
   </div>
+
+  <script>
+    const COUPLE_TITLE    = "AJ wed Mariama ❤️";
+    const RECEPTION_DATE  = "Sunday, 25th January 2026";
+    const RECEPTION_TIME  = "5:30 PM";
+    const RECEPTION_VENUE = "Reception Venue: Bailey Street, Brookfields – JC Hall";
+
+    document.title = `${COUPLE_TITLE} — Reception`;
+    document.getElementById("namesText").innerHTML = COUPLE_TITLE;
+    document.getElementById("dateText").textContent = RECEPTION_DATE;
+    document.getElementById("timeText").textContent = RECEPTION_TIME;
+    document.getElementById("venueText").textContent = RECEPTION_VENUE;
+  </script>
 </body>
 </html>
