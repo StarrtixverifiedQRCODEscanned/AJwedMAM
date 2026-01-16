@@ -7,189 +7,181 @@
 
   <style>
  :root{
-  /* Lime green background */
+  /* LIME GREEN BACKGROUND */
   --lime-1:#baff00;   /* bright lime */
-  --lime-2:#9be000;   /* slightly deeper lime */
+  --lime-2:#9be000;   /* deeper lime */
 
-  /* Dark pitch green (text background) */
+  /* DARK PITCH GREEN (text background) */
   --pitch:#0b1f14;
 
-  /* Text colors */
+  /* TEXT */
   --cream:#ffffff;
   --cream2: rgba(255,255,255,0.85);
   --line: rgba(255,255,255,0.18);
 }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
 
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color: var(--cream);
-      overflow-x:hidden;
-      background: linear-gradient(180deg, var(--lime-1), var(--lime-2));
-      position: relative;
-    }
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 
-    /* ===== Romantic flower overlay ===== */
-    body::before{
-      content:"";
-      position: fixed;
-      inset:-60px;
-      pointer-events:none;
-      z-index: 0;
-      background:
-        radial-gradient(circle at 6% 8%,  rgba(255,255,255,0.26) 0 16px, transparent 17px),
-        radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.18) 0 22px, transparent 23px),
-        radial-gradient(circle at 94% 8%,  rgba(255,255,255,0.26) 0 16px, transparent 17px),
-        radial-gradient(circle at 90% 12%, rgba(255, 75, 95,0.18) 0 22px, transparent 23px),
-        radial-gradient(circle at 12% 88%, rgba(255,255,255,0.20) 0 40px, transparent 41px),
-        radial-gradient(circle at 88% 86%, rgba(255,170,185,0.14) 0 52px, transparent 53px);
-      opacity: 0.8;
-      animation: floaty 10s ease-in-out infinite;
-    }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--cream);
+  overflow-x:hidden;
+  background: linear-gradient(180deg, var(--lime-1), var(--lime-2));
+  position:relative;
+}
 
-    @keyframes floaty{
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+/* ===== SOFT FLOWER OVERLAY (NO RED BACKGROUND) ===== */
+body::before{
+  content:"";
+  position:fixed;
+  inset:-60px;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,255,255,0.25) 0 22px, transparent 23px),
+    radial-gradient(circle at 90% 15%, rgba(255,255,255,0.18) 0 36px, transparent 37px),
+    radial-gradient(circle at 12% 88%, rgba(255,255,255,0.20) 0 42px, transparent 43px),
+    radial-gradient(circle at 88% 86%, rgba(255,255,255,0.16) 0 52px, transparent 53px);
+  opacity:0.85;
+  animation: floaty 10s ease-in-out infinite;
+}
 
-    .layer{ position: relative; z-index:1; }
+@keyframes floaty{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-10px); }
+}
 
-    /* ===== HERO ===== */
-    .hero{
-      min-height: 100vh;
-      display:grid;
-      place-items:center;
-      padding: 34px 16px;
-      position: relative;
-    }
+.layer{ position:relative; z-index:1; }
 
-    .card{
-      width: min(900px, 92vw);
-      background: rgba(11,31,20,0.92);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: clamp(24px, 4vw, 48px);
-      text-align:center;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.35);
-      backdrop-filter: blur(10px);
-    }
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:34px 16px;
+}
 
-    .tag{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      color: var(--cream2);
-      font-size: 13px;
-    }
+.card{
+  width:min(900px,92vw);
+  background: rgba(11,31,20,0.94);
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:clamp(24px,4vw,48px);
+  text-align:center;
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+}
 
-    .names{
-      margin: 18px 0 10px;
-      font-size: clamp(40px, 6vw, 70px);
-      font-weight: 900;
-      color: var(--cream);
-      text-shadow: 0 14px 40px rgba(0,0,0,0.35);
-    }
+.tag{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:10px 14px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background: rgba(255,255,255,0.08);
+  color:var(--cream2);
+  font-size:13px;
+}
 
-    .details{
-      display:grid;
-      gap:10px;
-      margin: 14px auto 6px;
-      color: var(--cream2);
-      font-size: 15px;
-    }
+.names{
+  margin:18px 0 10px;
+  font-size:clamp(40px,6vw,70px);
+  font-weight:900;
+  color:var(--cream);
+}
 
-    .detailRow{
-      display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.details{
+  display:grid;
+  gap:10px;
+  margin:14px auto 6px;
+  color:var(--cream2);
+  font-size:15px;
+}
 
-    .pill{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.08);
-      padding: 10px 14px;
-      border-radius: 999px;
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-    }
+.detailRow{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
-    .scrollHint{
-      margin-top: 16px;
-      font-size: 14px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.90);
-    }
+.pill{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,0.08);
+  padding:10px 14px;
+  border-radius:999px;
+}
 
-    /* ===== SECTION 2 ===== */
-    .section{
-      padding: 72px 16px 80px;
-      text-align:center;
-    }
+.scrollHint{
+  margin-top:16px;
+  font-size:14px;
+  font-weight:700;
+  color:rgba(255,255,255,0.9);
+}
 
-    .wrap{
-      width: min(980px, 94vw);
-      margin: 0 auto;
-    }
+/* ===== SECTION 2 ===== */
+.section{
+  padding:72px 16px 80px;
+  text-align:center;
+}
 
-    .h2{
-      font-size: clamp(26px, 3.6vw, 36px);
-      color: var(--pitch);
-      margin-bottom: 10px;
-      text-shadow: 0 8px 20px rgba(255,255,255,0.25);
-    }
+.wrap{
+  width:min(980px,94vw);
+  margin:0 auto;
+}
 
-    .sub{
-      color: rgba(11,31,20,0.9);
-      font-size: 14px;
-      margin-bottom: 22px;
-      font-weight: 600;
-    }
+.h2{
+  font-size:clamp(26px,3.6vw,36px);
+  color:var(--pitch);
+  margin-bottom:10px;
+}
 
-    .centerCTA{
-      display:flex;
-      flex-direction: column;
-      align-items:center;
-      gap: 14px;
-    }
+.sub{
+  color:#1b4332;
+  font-size:14px;
+  margin-bottom:22px;
+  font-weight:600;
+}
 
-    .btn{
-      text-decoration:none;
-      background: rgba(11,31,20,0.94);
-      color: var(--cream);
-      padding: 14px 24px;
-      border-radius: 20px;
-      font-weight: 800;
-      min-width: min(360px, 92vw);
-      transition: transform .15s ease, box-shadow .2s ease;
-      border: 1px solid rgba(255,255,255,0.18);
-    }
+.centerCTA{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
 
-    .btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.25);
-    }
+.btn{
+  text-decoration:none;
+  background: rgba(11,31,20,0.94);
+  color:var(--cream);
+  padding:14px 24px;
+  border-radius:20px;
+  font-weight:800;
+  min-width:min(360px,92vw);
+  border:1px solid rgba(255,255,255,0.18);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
 
-    .footer{
-      margin-top: 32px;
-      color: rgba(11,31,20,0.9);
-      font-size: 12px;
-      font-weight: 600;
-    }
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,0.25);
+}
+
+.footer{
+  margin-top:32px;
+  color:#1b4332;
+  font-size:12px;
+  font-weight:600;
+}
   </style>
 </head>
 
 <body>
   <div class="layer">
 
-    <!-- HERO -->
     <section class="hero">
       <div class="card">
         <div class="tag">💍 Wedding Reception</div>
@@ -202,7 +194,9 @@
             <span class="pill" id="timeText">5:30 PM</span>
           </div>
           <div class="detailRow">
-            <span class="pill" id="venueText">Reception Venue: Bailey Street, Brookfields – JC Hall</span>
+            <span class="pill" id="venueText">
+              Reception Venue: Bailey Street, Brookfields – JC Hall
+            </span>
           </div>
         </div>
 
@@ -212,18 +206,17 @@
       </div>
     </section>
 
-    <!-- SECTION 2 -->
     <section class="section">
       <div class="wrap">
         <h2 class="h2">Memories</h2>
         <p class="sub">A romantic space for your special moments.</p>
 
         <div class="centerCTA">
-          <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank" rel="noopener">
+          <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank">
             🌸 Explore Wedding Photos
           </a>
 
-          <a class="btn" href="#" target="_blank" rel="noopener">
+          <a class="btn" href="#" target="_blank">
             📜 View Wedding Agenda
           </a>
         </div>
