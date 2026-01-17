@@ -6,162 +6,192 @@
   <title>AJ & Mariama — Reception</title>
 
   <style>
- :root{
- /* Romantic deep red background */
---gold-1:#5b0f14;   /* deep wine red */
---gold-2:#8b1e24;   /* rich romantic red */
+  :root{
+    /* FULL RED BACKGROUND */
+    --red-1:#7a0c15;   /* deep romantic red */
+    --red-2:#b11226;   /* rich crimson */
 
-  /* Deep pitch background (main body) */
-  --dark-bg:#0b1f14;  /* deep forest / pitch green */
+    /* SOFT BLUSH CARD */
+    --blush-1:#fdebed;
+    --blush-2:#f9d6da;
 
-  /* Text colors */
-  --cream:#ffffff;
-  --cream2: rgba(255,255,255,0.85);
-  --line: rgba(255,255,255,0.15);
-}
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    /* TEXT */
+    --dark:#4a0d12;
+    --line: rgba(122,12,21,0.25);
+  }
 
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color: var(--cream);
-      overflow-x:hidden;
-      background:
-        radial-gradient(1200px 700px at 20% 10%, rgba(255,215,120,0.18), transparent 60%),
-        radial-gradient(900px 600px at 80% 20%, rgba(255,205,90,0.14), transparent 62%),
-        radial-gradient(900px 600px at 50% 90%, rgba(255,220,140,0.10), transparent 65%),
-        linear-gradient(180deg, var(--gold-2), var(--gold-1));
-      position: relative;
-    }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
 
-    /* ===== PLENTY romantic bubble flowers (white + red + pink) ===== */
-    body::before{
-      content:"";
-      position: fixed;
-      inset:-60px;
-      pointer-events:none;
-      z-index: 0;
-      background:
-        radial-gradient(circle at 6% 8%,  rgba(255,255,255,0.28) 0 16px, transparent 17px),
-        radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.22) 0 22px, transparent 23px),
-        radial-gradient(circle at 12% 6%,  rgba(255,255,255,0.20) 0 28px, transparent 29px),
-        radial-gradient(circle at 5% 16%,  rgba(255,160,175,0.16) 0 40px, transparent 41px),
-        radial-gradient(circle at 16% 10%, rgba(255,255,255,0.12) 0 48px, transparent 49px);
-      opacity: 0.95;
-      animation: floaty 10s ease-in-out infinite;
-    }
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: linear-gradient(180deg, var(--red-1), var(--red-2));
+    color: var(--dark);
+    overflow-x:hidden;
+    position:relative;
+  }
 
-    @keyframes floaty{
-      0%,100% { transform: translateY(0px); }
-      50%     { transform: translateY(-10px); }
-    }
+  /* 🌸 ROMANTIC FLOWER OVERLAY (ENTIRE PAGE) */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:-60px;
+    pointer-events:none;
+    z-index:0;
+    background:
+      /* small flowers */
+      radial-gradient(circle at 10% 12%, rgba(255,220,225,0.35) 0 26px, transparent 27px),
+      radial-gradient(circle at 90% 14%, rgba(255,210,220,0.32) 0 36px, transparent 37px),
+      radial-gradient(circle at 18% 84%, rgba(255,215,220,0.30) 0 44px, transparent 45px),
+      radial-gradient(circle at 82% 86%, rgba(255,200,210,0.28) 0 52px, transparent 53px),
 
-    .layer { position: relative; z-index: 1; }
+      /* large soft petals */
+      radial-gradient(circle at 30% 30%, rgba(255,230,235,0.12) 0 160px, transparent 161px),
+      radial-gradient(circle at 70% 28%, rgba(255,210,220,0.12) 0 180px, transparent 181px),
+      radial-gradient(circle at 50% 90%, rgba(255,220,230,0.10) 0 200px, transparent 201px);
 
-    /* ===== HERO ===== */
-    .hero{
-      min-height: 100vh;
-      display:grid;
-      place-items:center;
-      padding: 34px 16px;
-      position: relative;
-    }
+    opacity:0.9;
+    animation: floaty 14s ease-in-out infinite;
+  }
 
-    .card{
-      width: min(900px, 92vw);
-      border: 1px solid var(--line);
-      background: rgba(10,7,2,0.28);
-      backdrop-filter: blur(10px);
-      border-radius: 24px;
-      padding: clamp(24px, 4vw, 48px);
-      text-align:center;
-      position: relative;
-      z-index: 1;
-    }
+  @keyframes floaty{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-14px); }
+  }
 
-    .tag{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,247,230,0.08);
-      color: var(--cream2);
-      font-size: 13px;
-    }
+  .layer{ position:relative; z-index:1; }
 
-    .names{
-      margin: 18px 0 10px;
-      font-size: clamp(40px, 6vw, 70px);
-      font-weight: 900;
-      color: var(--cream);
-    }
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:34px 16px;
+  }
 
-    .details{
-      display:grid;
-      gap:10px;
-      margin: 14px auto 6px;
-      color: var(--cream2);
-      font-size: 15px;
-    }
+  .card{
+    width:min(900px,92vw);
+    background: linear-gradient(180deg, var(--blush-1), var(--blush-2));
+    border:1px solid var(--line);
+    border-radius:32px;
+    padding:clamp(24px,4vw,48px);
+    text-align:center;
+    box-shadow:0 30px 70px rgba(0,0,0,0.35);
+  }
 
-    .detailRow{
-      display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+  .tag{
+    display:inline-flex;
+    gap:8px;
+    align-items:center;
+    padding:10px 16px;
+    border-radius:999px;
+    background: rgba(255,255,255,0.75);
+    border:1px solid var(--line);
+    font-size:13px;
+    font-weight:600;
+  }
 
-    .pill{
-      border: 1px solid var(--line);
-      background: rgba(255,247,230,0.07);
-      padding: 10px 12px;
-      border-radius: 999px;
-    }
+  .names{
+    margin:18px 0 12px;
+    font-size:clamp(42px,6vw,74px);
+    font-weight:900;
+  }
 
-    .scrollHint{
-      margin-top: 14px;
-      color: rgba(255,247,230,0.85);
-      font-size: 14px;
-      font-weight: 600;
-    }
+  .details{
+    display:grid;
+    gap:12px;
+    margin:16px auto 8px;
+    font-size:15px;
+  }
 
-    /* ===== SECTION ===== */
-    .section{
-      padding: 72px 16px 80px;
-      text-align:center;
-    }
+  .detailRow{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+  }
 
-    .btn{
-      text-decoration:none;
-      border: 1px solid rgba(255,247,230,0.22);
-      background: rgba(255,247,230,0.92);
-      color: #2b1d05;
-      padding: 14px 22px;
-      border-radius: 20px;
-      display:inline-block;
-      margin-top: 14px;
-      font-weight: 800;
-    }
+  .pill{
+    background: rgba(255,255,255,0.8);
+    border:1px solid var(--line);
+    padding:10px 16px;
+    border-radius:999px;
+    font-weight:600;
+  }
 
-    .footer{
-      margin-top: 32px;
-      color: rgba(255,247,230,0.65);
-      font-size: 12px;
-    }
+  .scrollHint{
+    margin-top:20px;
+    font-size:14px;
+    font-weight:700;
+  }
+
+  /* SECTION */
+  .section{
+    padding:72px 16px 80px;
+    text-align:center;
+  }
+
+  .wrap{
+    width:min(980px,94vw);
+    margin:0 auto;
+  }
+
+  .h2{
+    font-size:clamp(26px,3.6vw,36px);
+    margin-bottom:10px;
+    color:#fff;
+  }
+
+  .sub{
+    font-size:14px;
+    margin-bottom:22px;
+    font-weight:600;
+    color: rgba(255,255,255,0.9);
+  }
+
+  .centerCTA{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+
+  .btn{
+    text-decoration:none;
+    background: linear-gradient(180deg, var(--blush-1), var(--blush-2));
+    color: var(--dark);
+    padding:14px 26px;
+    border-radius:22px;
+    font-weight:800;
+    min-width:min(360px,92vw);
+    border:1px solid var(--line);
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+
+  .btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 16px 36px rgba(0,0,0,0.35);
+  }
+
+  .footer{
+    margin-top:32px;
+    font-size:12px;
+    font-weight:600;
+    color: rgba(255,255,255,0.8);
+  }
   </style>
 </head>
 
 <body>
   <div class="layer">
 
+    <!-- HERO -->
     <section class="hero">
       <div class="card">
         <div class="tag">💍 Wedding Reception</div>
 
-        <div class="names" id="namesText">AJ weds Mariama ❤️</div>
+        <div class="names" id="namesText">AJ wed Mariama ❤️</div>
 
         <div class="details">
           <div class="detailRow">
@@ -169,7 +199,9 @@
             <span class="pill" id="timeText">5:30 PM</span>
           </div>
           <div class="detailRow">
-            <span class="pill" id="venueText">Reception Venue: Bailey Street, Brookfields – JC Hall</span>
+            <span class="pill" id="venueText">
+              Reception Venue: Bailey Street, Brookfields – JC Hall
+            </span>
           </div>
         </div>
 
@@ -179,14 +211,39 @@
       </div>
     </section>
 
+    <!-- SECTION -->
     <section class="section">
-      <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank">
-        🌸 Explore Wedding Photos
-      </a>
+      <div class="wrap">
+        <h2 class="h2">Memories</h2>
+        <p class="sub">A romantic space for your special moments.</p>
 
-      <div class="footer">Made with love • AJ & Mariama</div>
+        <div class="centerCTA">
+          <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank">
+            🌸 Explore Wedding Photos
+          </a>
+
+          <a class="btn" href="#" target="_blank">
+            📜 View Wedding Agenda
+          </a>
+        </div>
+
+        <div class="footer">Made with love • AJ & Mariama</div>
+      </div>
     </section>
 
   </div>
+
+  <script>
+    const COUPLE_TITLE    = "Alpha weds Mariama ❤️";
+    const RECEPTION_DATE  = "Sunday, 25th January 2026";
+    const RECEPTION_TIME  = "5:30 PM";
+    const RECEPTION_VENUE = "Reception Venue: Bailey Street, Brookfields – JC Hall";
+
+    document.title = `${COUPLE_TITLE} — Reception`;
+    document.getElementById("namesText").innerHTML = COUPLE_TITLE;
+    document.getElementById("dateText").textContent = RECEPTION_DATE;
+    document.getElementById("timeText").textContent = RECEPTION_TIME;
+    document.getElementById("venueText").textContent = RECEPTION_VENUE;
+  </script>
 </body>
 </html>
