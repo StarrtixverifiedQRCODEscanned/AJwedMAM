@@ -1,1 +1,192 @@
-<!doctype html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>AJ & Mariama — Reception</title> <style> :root{ /* Light green romantic background */ --gold-1:#b7e4c7; /* soft mint green */ --gold-2:#95d5b2; /* light sage green */ /* Deep pitch background (main body) */ --dark-bg:#0b1f14; /* deep forest / pitch green */ /* Text colors */ --cream:#ffffff; --cream2: rgba(255,255,255,0.85); --line: rgba(255,255,255,0.15); } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; color: var(--cream); overflow-x:hidden; background: radial-gradient(1200px 700px at 20% 10%, rgba(255,215,120,0.18), transparent 60%), radial-gradient(900px 600px at 80% 20%, rgba(255,205,90,0.14), transparent 62%), radial-gradient(900px 600px at 50% 90%, rgba(255,220,140,0.10), transparent 65%), linear-gradient(180deg, var(--gold-2), var(--gold-1)); position: relative; } /* ===== PLENTY romantic bubble flowers (white + red + pink) ===== */ body::before{ content:""; position: fixed; inset:-60px; pointer-events:none; z-index: 0; /* Many layered radial “bubble flowers” around edges */ background: /* ========== TOP LEFT FLOWER BUBBLES ========== */ radial-gradient(circle at 6% 8%, rgba(255,255,255,0.28) 0 16px, transparent 17px), radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.22) 0 22px, transparent 23px), radial-gradient(circle at 12% 6%, rgba(255,255,255,0.20) 0 28px, transparent 29px), radial-gradient(circle at 5% 16%, rgba(255,160,175,0.16) 0 40px, transparent 41px), radial-gradient(circle at 16% 10%, rgba(255,255,255,0.12) 0 48px, transparent 49px), /* ========== TOP RIGHT FLOWER BUBBLES ========== */ radial-gradient(circle at 94% 8%, rgba(255,255,255,0.28) 0 16px, transparent 17px), radial-gradient(circle at 90% 12%, rgba(255, 75, 95,0.22) 0 22px, transparent 23px), radial-gradient(circle at 88% 6%, rgba(255,255,255,0.20) 0 28px, transparent 29px), radial-gradient(circle at 95% 16%, rgba(255,160,175,0.16) 0 40px, transparent 41px), radial-gradient(circle at 84% 10%, rgba(255,255,255,0.12) 0 48px, transparent 49px), /* ========== LEFT SIDE (more dense) ========== */ radial-gradient(circle at 3% 28%, rgba(255,255,255,0.22) 0 18px, transparent 19px), radial-gradient(circle at 6% 32%, rgba(255, 75, 95,0.18) 0 26px, transparent 27px), radial-gradient(circle at 4% 38%, rgba(255,170,185,0.14) 0 38px, transparent 39px), radial-gradient(circle at 7% 44%, rgba(255,255,255,0.10) 0 54px, transparent 55px), radial-gradient(circle at 4% 56%, rgba(255,255,255,0.20) 0 18px, transparent 19px), radial-gradient(circle at 7% 60%, rgba(255, 75, 95,0.16) 0 26px, transparent 27px), radial-gradient(circle at 5% 66%, rgba(255,170,185,0.12) 0 38px, transparent 39px), radial-gradient(circle at 8% 72%, rgba(255,255,255,0.10) 0 56px, transparent 57px), /* ========== RIGHT SIDE (more dense) ========== */ radial-gradient(circle at 97% 28%, rgba(255,255,255,0.22) 0 18px, transparent 19px), radial-gradient(circle at 94% 32%, rgba(255, 75, 95,0.18) 0 26px, transparent 27px), radial-gradient(circle at 96% 38%, rgba(255,170,185,0.14) 0 38px, transparent 39px), radial-gradient(circle at 93% 44%, rgba(255,255,255,0.10) 0 54px, transparent 55px), radial-gradient(circle at 96% 56%, rgba(255,255,255,0.20) 0 18px, transparent 19px), radial-gradient(circle at 93% 60%, rgba(255, 75, 95,0.16) 0 26px, transparent 27px), radial-gradient(circle at 95% 66%, rgba(255,170,185,0.12) 0 38px, transparent 39px), radial-gradient(circle at 92% 72%, rgba(255,255,255,0.10) 0 56px, transparent 57px), /* ========== BOTTOM LEFT FLOWER BUBBLES ========== */ radial-gradient(circle at 10% 92%, rgba(255,255,255,0.26) 0 18px, transparent 19px), radial-gradient(circle at 14% 88%, rgba(255, 75, 95,0.20) 0 26px, transparent 27px), radial-gradient(circle at 6% 86%, rgba(255,170,185,0.14) 0 42px, transparent 43px), radial-gradient(circle at 16% 96%, rgba(255,255,255,0.10) 0 58px, transparent 59px), /* ========== BOTTOM RIGHT FLOWER BUBBLES ========== */ radial-gradient(circle at 90% 92%, rgba(255,255,255,0.26) 0 18px, transparent 19px), radial-gradient(circle at 86% 88%, rgba(255, 75, 95,0.20) 0 26px, transparent 27px), radial-gradient(circle at 94% 86%, rgba(255,170,185,0.14) 0 42px, transparent 43px), radial-gradient(circle at 84% 96%, rgba(255,255,255,0.10) 0 58px, transparent 59px), /* ========== EXTRA “BLOOM” LAYERS (subtle big petals) ========== */ radial-gradient(circle at 20% 18%, rgba(255,255,255,0.06) 0 120px, transparent 121px), radial-gradient(circle at 80% 22%, rgba(255, 75, 95,0.05) 0 140px, transparent 141px), radial-gradient(circle at 50% 88%, rgba(255,170,185,0.05) 0 160px, transparent 161px); filter: blur(0.2px); opacity: 0.95; animation: floaty 10s ease-in-out infinite; transform: translateZ(0); } /* soft sparkles */ body::after{ content:""; position: fixed; inset:0; pointer-events:none; z-index:0; background: radial-gradient(circle at 30% 30%, rgba(255,247,230,0.08) 0 2px, transparent 3px), radial-gradient(circle at 70% 25%, rgba(255,247,230,0.08) 0 2px, transparent 3px), radial-gradient(circle at 18% 70%, rgba(255,247,230,0.07) 0 2px, transparent 3px), radial-gradient(circle at 82% 75%, rgba(255,247,230,0.07) 0 2px, transparent 3px); opacity: 0.7; } @keyframes floaty{ 0%,100% { transform: translateY(0px) scale(1); } 50% { transform: translateY(-10px) scale(1.01); } } /* content stacking above decorations */ .layer { position: relative; z-index: 1; } /* ===== HERO ===== */ .hero{ min-height: 100vh; display:grid; place-items:center; padding: 34px 16px; position: relative; } /* Optional hero image */ .hero::before{ content:""; position:absolute; inset:0; background-image: url("hero.jpg"); background-size: cover; background-position:center; opacity: 0.22; /* set to 0 if you don't want image */ filter: saturate(1.05) contrast(1.02); z-index: 0; } .hero::after{ content:""; position:absolute; inset:0; background: radial-gradient(900px 600px at 50% 25%, rgba(0,0,0,0.15), rgba(0,0,0,0.35)); z-index: 0; } .card{ width: min(900px, 92vw); border: 1px solid var(--line); background: rgba(10,7,2,0.28); backdrop-filter: blur(10px); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(24px, 4vw, 48px); text-align:center; position: relative; z-index: 1; } .tag{ display:inline-flex; gap:10px; align-items:center; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,247,230,0.08); color: var(--cream2); font-size: 13px; letter-spacing: 0.3px; } .names{ margin: 18px 0 10px; font-size: clamp(40px, 6vw, 70px); line-height: 1.02; letter-spacing: -1px; font-weight: 900; color: var(--cream); text-shadow: 0 14px 40px rgba(0,0,0,0.35); } .names .with{ font-weight: 700; opacity: 0.95; } .details{ display:grid; gap:10px; margin: 14px auto 6px; color: var(--cream2); font-size: clamp(14px, 2.1vw, 16px); } .detailRow{ display:flex; justify-content:center; gap: 10px; flex-wrap: wrap; } .pill{ border: 1px solid var(--line); background: rgba(255,247,230,0.07); padding: 10px 12px; border-radius: 999px; display:inline-flex; gap:8px; align-items:center; } .scrollHint{ margin-top: 14px; display:flex; justify-content:center; align-items:center; gap:10px; color: rgba(255,247,230,0.78); font-size: 13px; } /* ===== SECTION 2 ===== */ .section{ padding: 72px 16px 80px; } .wrap{ width: min(980px, 94vw); margin: 0 auto; text-align:center; } .h2{ font-size: clamp(24px, 3.6vw, 34px); margin: 0 0 10px; letter-spacing: -0.3px; color: var(--cream); text-shadow: 0 10px 30px rgba(0,0,0,0.25); } .sub{ margin: 0 auto 22px; color: rgba(255,247,230,0.82); font-size: 14px; line-height: 1.6; width: min(640px, 92vw); } .centerCTA{ display:flex; flex-direction: column; align-items:center; gap: 14px; margin: 18px 0 0; } .btn{ cursor:pointer; text-decoration:none; border: 1px solid rgba(255,247,230,0.22); background: rgba(255,247,230,0.10); color: var(--cream); padding: 14px 22px; border-radius: 20px; display:inline-flex; align-items:center; justify-content:center; gap: 10px; transition: transform .15s ease, background .2s ease, border-color .2s ease; user-select:none; font-weight: 800; min-width: min(360px, 92vw); } .btn:hover{ transform: translateY(-2px); background: rgba(255,247,230,0.14); border-color: rgba(255,247,230,0.28); } .btn.primary{ background: rgba(255,247,230,0.92); color: #2b1d05; border-color: rgba(255,247,230,0.80); box-shadow: 0 18px 40px rgba(0,0,0,0.20); } .btn.primary:hover{ background: #fff3d6; } .footer{ margin-top: 32px; text-align:center; color: rgba(255,247,230,0.65); font-size: 12px; } </style> </head> <body> <div class="layer"> <!-- HERO --> <section class="hero" id="top"> <div class="card"> <div class="tag">💍 Wedding Reception</div> <div class="names" id="namesText"> AJ <span class="with">with</span> Mariama </div> <div class="details"> <div class="detailRow"> <span class="pill">📅 <strong id="dateText">Sunday, 25th January 2026</strong></span> <span class="pill">⏰ <strong id="timeText">5:30 PM</strong></span> </div> <div class="detailRow"> <span class="pill">📍 <strong id="venueText">Reception Venue Bailey Street, Brookfields – JC Hall</strong></span> </div> </div> <div class="scrollHint"> <span>⌄ Scroll down ⌄</span> </div> </div> </section> <!-- SECTION 2 --> <section class="section" id="memories"> <div class="wrap"> <h2 class="h2">Memories</h2> <p class="sub">A romantic, golden space for your special moments.</p> <div class="centerCTA"> <a class="btn primary" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank" rel="noopener"> 🌸 Explore Wedding Photos </a> <!-- Replace this link with your agenda link (PDF/Drive/Webpage) --> <a class="btn primary" href="#" target="_blank" rel="noopener"> 📜 View Wedding Agenda </a> </div> <div class="footer">Made with love • AJ & Mariama</div> </div> </section> </div> <script> // ========================= // EDIT THESE VALUES ONLY // ========================= const COUPLE_TITLE = "AJ weds Mariama ❤️"; const RECEPTION_DATE = "Sunday, 25th January 2026"; const RECEPTION_TIME = "5:30 PM"; const RECEPTION_VENUE = "Reception Venue: Bailey Street, Brookfields – JC Hall "; document.title = ${COUPLE_TITLE} — Reception; document.getElementById("namesText").innerHTML = COUPLE_TITLE; document.getElementById("dateText").textContent = RECEPTION_DATE; document.getElementById("timeText").textContent = RECEPTION_TIME; document.getElementById("venueText").textContent = RECEPTION_VENUE; </script> </body> </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJ & Mariama — Reception</title>
+
+  <style>
+ :root{
+ /* Romantic deep red background */
+--gold-1:#5b0f14;   /* deep wine red */
+--gold-2:#8b1e24;   /* rich romantic red */
+
+  /* Deep pitch background (main body) */
+  --dark-bg:#0b1f14;  /* deep forest / pitch green */
+
+  /* Text colors */
+  --cream:#ffffff;
+  --cream2: rgba(255,255,255,0.85);
+  --line: rgba(255,255,255,0.15);
+}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: var(--cream);
+      overflow-x:hidden;
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(255,215,120,0.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 20%, rgba(255,205,90,0.14), transparent 62%),
+        radial-gradient(900px 600px at 50% 90%, rgba(255,220,140,0.10), transparent 65%),
+        linear-gradient(180deg, var(--gold-2), var(--gold-1));
+      position: relative;
+    }
+
+    /* ===== PLENTY romantic bubble flowers (white + red + pink) ===== */
+    body::before{
+      content:"";
+      position: fixed;
+      inset:-60px;
+      pointer-events:none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 6% 8%,  rgba(255,255,255,0.28) 0 16px, transparent 17px),
+        radial-gradient(circle at 10% 12%, rgba(255, 75, 95,0.22) 0 22px, transparent 23px),
+        radial-gradient(circle at 12% 6%,  rgba(255,255,255,0.20) 0 28px, transparent 29px),
+        radial-gradient(circle at 5% 16%,  rgba(255,160,175,0.16) 0 40px, transparent 41px),
+        radial-gradient(circle at 16% 10%, rgba(255,255,255,0.12) 0 48px, transparent 49px);
+      opacity: 0.95;
+      animation: floaty 10s ease-in-out infinite;
+    }
+
+    @keyframes floaty{
+      0%,100% { transform: translateY(0px); }
+      50%     { transform: translateY(-10px); }
+    }
+
+    .layer { position: relative; z-index: 1; }
+
+    /* ===== HERO ===== */
+    .hero{
+      min-height: 100vh;
+      display:grid;
+      place-items:center;
+      padding: 34px 16px;
+      position: relative;
+    }
+
+    .card{
+      width: min(900px, 92vw);
+      border: 1px solid var(--line);
+      background: rgba(10,7,2,0.28);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: clamp(24px, 4vw, 48px);
+      text-align:center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,247,230,0.08);
+      color: var(--cream2);
+      font-size: 13px;
+    }
+
+    .names{
+      margin: 18px 0 10px;
+      font-size: clamp(40px, 6vw, 70px);
+      font-weight: 900;
+      color: var(--cream);
+    }
+
+    .details{
+      display:grid;
+      gap:10px;
+      margin: 14px auto 6px;
+      color: var(--cream2);
+      font-size: 15px;
+    }
+
+    .detailRow{
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .pill{
+      border: 1px solid var(--line);
+      background: rgba(255,247,230,0.07);
+      padding: 10px 12px;
+      border-radius: 999px;
+    }
+
+    .scrollHint{
+      margin-top: 14px;
+      color: rgba(255,247,230,0.85);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ===== SECTION ===== */
+    .section{
+      padding: 72px 16px 80px;
+      text-align:center;
+    }
+
+    .btn{
+      text-decoration:none;
+      border: 1px solid rgba(255,247,230,0.22);
+      background: rgba(255,247,230,0.92);
+      color: #2b1d05;
+      padding: 14px 22px;
+      border-radius: 20px;
+      display:inline-block;
+      margin-top: 14px;
+      font-weight: 800;
+    }
+
+    .footer{
+      margin-top: 32px;
+      color: rgba(255,247,230,0.65);
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layer">
+
+    <section class="hero">
+      <div class="card">
+        <div class="tag">💍 Wedding Reception</div>
+
+        <div class="names" id="namesText">AJ wed Mariama ❤️</div>
+
+        <div class="details">
+          <div class="detailRow">
+            <span class="pill" id="dateText">Sunday, 25th January 2026</span>
+            <span class="pill" id="timeText">5:30 PM</span>
+          </div>
+          <div class="detailRow">
+            <span class="pill" id="venueText">Reception Venue: Bailey Street, Brookfields – JC Hall</span>
+          </div>
+        </div>
+
+        <div class="scrollHint">
+          Please bring your invitation for the reception
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <a class="btn" href="https://starrtix81.pixieset.com/ajwedmam/" target="_blank">
+        🌸 Explore Wedding Photos
+      </a>
+
+      <div class="footer">Made with love • AJ & Mariama</div>
+    </section>
+
+  </div>
+</body>
+</html>
